@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/nekzus/.local/share'
+let g:netrw_dirhist_8='/home/nekzus/.local/share/wezterm'
+let g:netrw_dirhist_7='/home/nekzus/.local/share'
+let g:netrw_dirhist_6='/home/nekzus/.local/share/JetBrains'
+let g:netrw_dirhist_5='/home/nekzus/.local/share/JetBrains/PyCharmCE2023.1'
+let g:netrw_dirhist_4='/home/nekzus/.local/share/JetBrains'
+let g:netrw_dirhist_3='/home/nekzus/.local/share'
+let g:netrw_dirhist_2='/home/nekzus/.local/share/chezmoi'
+let g:netrw_dirhist_1='/'
+let g:netrw_dirhist_0='/home'
