@@ -1,0 +1,90 @@
+{
+	"autoeval": true,
+	"transpile": true,
+	"showUndefined": false,
+	"loopProtection": true,
+	"lineNumbers": false,
+	"invisibles": false,
+	"matchingLines": true,
+	"activeLine": false,
+	"lineWrap": true,
+	"vimkeys": false,
+	"userId": "ad4ed38d-3ce9-43b1-91a9-b3098566ac91",
+	"fontSize": "14",
+	"font": "DejaVu Sans Mono",
+	"formatOnRun": false,
+	"closeBrackets": true,
+	"width": 1440,
+	"height": 780,
+	"envVars": [],
+	"analytics": true,
+	"prettierConfig": {
+		"printWidth": 80,
+		"tabWidth": 2,
+		"useTabs": false,
+		"semi": true,
+		"singleQuote": false,
+		"quoteProps": "as-needed",
+		"jsxSingleQuote": false,
+		"trailingComma": "es5",
+		"bracketSpacing": true,
+		"bracketSameLine": false,
+		"arrowParens": "always"
+	},
+	"babelPlugins": {
+		"decoratorsPlugin": false,
+		"functionSentPlugin": false,
+		"doExpressionsPlugin": false,
+		"asyncDoExpressionsPlugin": false,
+		"pipelineOperatorPlugin": false,
+		"partialApplicationPlugin": false,
+		"throwExpressionsPlugin": false,
+		"recordAndTuple": false
+	},
+	"babelPresets": {
+		"typeScriptPreset": true,
+		"reactPreset": false,
+		"envPreset": true
+	},
+	"statementResults": true,
+	"tabs": {
+		"44e68a43-2bdf-40b3-9b48-d17f89708d6f": {
+			"saveFilePath": "",
+			"unsaved": false,
+			"title": "",
+			"arrangement": {
+				"direction": "row",
+				"first": "files",
+				"second": {
+					"direction": "row",
+					"first": "editor",
+					"second": "output",
+					"splitPercentage": 55
+				},
+				"splitPercentage": 0
+			}
+		},
+		"order": [
+			"44e68a43-2bdf-40b3-9b48-d17f89708d6f"
+		],
+		"activeTabID": "44e68a43-2bdf-40b3-9b48-d17f89708d6f"
+	},
+	"tabBarForSingleTab": true,
+	"autocomplete": false,
+	"diagnostics": false,
+	"signatures": false,
+	"hoverInfo": false,
+	"verticalLayout": true,
+	"scrolling": "auto",
+	"confirmClose": false,
+	"systemNode": false,
+	"bundling": false,
+	"theme": "dracula",
+	"hasUpdated": false,
+	"currentVersion": "2.9.0",
+	"firstOpen": false,
+	"x": 170,
+	"y": 161,
+	"renewReminder": true,
+	"topLevelAwait": false
+}
