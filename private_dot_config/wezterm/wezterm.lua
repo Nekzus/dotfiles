@@ -1,0 +1,104 @@
+-- Pull in the wezterm API
+local wezterm = require 'wezterm'
+
+local mux = wezterm.mux
+local act = wezterm.action
+--local act2 = wezterm.action
+
+-- This table will hold the configuration.
+local config = {}
+
+wezterm.on('gui-startup', function()
+ local tab, pane, window = mux.spawn_window({})
+ window:gui_window():maximize()
+end)
+
+
+-- In newer versions of wezterm, use the config_builder which will
+-- help provide clearer error messages
+if wezterm.config_builder then
+  config = wezterm.config_builder()
+end
+
+
+
+
+-- This is where you actually apply your config choices
+
+-- For example, changing the color scheme:
+
+--config.color_scheme = 'Brogrammer (Gogh)'
+--config.color_scheme = 'Argonaut'
+--config.color_scheme = 'Abernathy'
+--config.color_scheme = 'Brewer (dark) (terminal.sexy)'
+
+--config.color_scheme = 'deep'
+--config.color_scheme = 'Atelierforest (dark) (terminal.sexy)'
+  config.default_cursor_style = 'SteadyUnderline'
+  config.cursor_thickness = '5px'
+  config.enable_wayland = true
+  config.check_for_updates = true
+  config.check_for_updates_interval_seconds = 86400
+  config.use_fancy_tab_bar = true
+  config.enable_tab_bar = true
+  config.hide_tab_bar_if_only_one_tab = true
+  config.color_scheme = 'Abernathy'
+  config.window_background_opacity = 0.85
+  config.font = wezterm.font({family="FiraCode Nerd Font", harfbuzz_features={"calt=1", "clig=1", "liga=1"}})
+  config.font_size = 13.5
+  config.ssh_domains = {
+                    {
+		       name = "nekzus",
+		       remote_address = "nekzus",
+		       username = "nekzus"
+                    }
+}
+  config.mouse_bindings = {
+	{
+		event = { Down = { streak = 1, button = "Right" } },
+		mods = "NONE",
+		action = wezterm.action_callback(function(window, pane)
+			local has_selection = window:get_selection_text_for_pane(pane) ~= ""
+			if has_selection then
+				window:perform_action(act.CopyTo("ClipboardAndPrimarySelection"), pane)
+				window:perform_action(act.ClearSelection, pane)
+			else
+				window:perform_action(act({ PasteFrom = "Clipboard" }), pane)
+			end
+		end),
+	},
+}
+
+  config.keys = {
+
+           { key = "*", mods = "CTRL",  action = act.ResetFontSize },
+
+           { key = "-", mods = "CTRL",  action = act.DecreaseFontSize },
+
+           { key = "+", mods = "CTRL",  action = act.IncreaseFontSize },
+
+           { key = "phys:N", mods = "CTRL",  action = act.SpawnWindow },
+
+           { key = "phys:P", mods = "CTRL",  action = act.ActivateCommandPalette },
+
+          -- { key = "phys:V", mods = "CTRL",  action = act.PasteFrom("Clipboard") },
+
+          -- { key = "phys:C", mods = "CTRL",  action = act.CopyTo("Clipboard") },
+
+           { key = "F11", mods = "NONE",  action = act.ToggleFullScreen },
+
+  }
+
+  config.colors = {
+       
+  }
+ 
+  config.window_frame = {
+            font = wezterm.font { family = 'FiraCode NF', weight = 'Bold' },
+	    font_size = 11.0,
+	    active_titlebar_bg = '#333333',
+  }
+
+ 
+-- and finally, return the configuration to wezterm
+   return config
