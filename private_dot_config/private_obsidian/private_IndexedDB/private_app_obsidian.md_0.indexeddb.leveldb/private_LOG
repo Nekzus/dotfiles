@@ -1,0 +1,12 @@
+2023/09/03-14:24:57.761 3565b Reusing MANIFEST /home/nekzus/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
+2023/09/03-14:24:57.761 3565b Recovering log #4
+2023/09/03-14:24:57.782 3565b Reusing old log /home/nekzus/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000004.log 
+2023/09/03-14:25:35.076 35687 Level-0 table #8: started
+2023/09/03-14:25:35.222 35687 Level-0 table #8: 918774 bytes OK
+2023/09/03-14:25:35.311 35687 Delete type=0 #4
+2023/09/03-14:25:36.957 3565b Compacting 1@1 + 1@2 files
+2023/09/03-14:25:37.033 3565b Generated table #9@1: 6588 keys, 616306 bytes
+2023/09/03-14:25:37.033 3565b Compacted 1@1 + 1@2 files => 616306 bytes
+2023/09/03-14:25:37.124 3565b compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/09/03-14:25:37.124 3565b Delete type=2 #5
+2023/09/03-14:25:37.125 3565b Delete type=2 #8
