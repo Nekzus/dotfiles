@@ -1,0 +1,47 @@
+[2023-07-29 18:26:40.810] [info]  [db] Initialized DB client
+[2023-07-29 18:26:40.907] [warn]  The vm module of Node.js is deprecated in the renderer process and will be removed.
+[2023-07-29 18:26:40.910] [warn]  The vm module of Node.js is deprecated in the renderer process and will be removed.
+[2023-07-29 18:26:41.157] [warn]  The vm module of Node.js is deprecated in the renderer process and will be removed.
+[2023-07-29 18:26:41.323] [info]  [FileSystemDriver] Initialized in "/home/nekzus/.config/Insomnia/version-control"
+[2023-07-29 18:26:41.323] [info]  [sync] checking for collections which need to be moved into a remote project
+[2023-07-29 18:26:41.327] [info]  [FileSystemDriver] Initialized in "/home/nekzus/.config/Insomnia/version-control"
+[2023-07-29 18:26:46.329] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:26:46.330] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:26:46.330] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:26:46.330] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:26:46.330] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:26:46.331] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:26:46.331] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:26:46.331] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:07.291] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:07.291] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:07.291] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:07.292] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:07.292] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:07.292] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:07.292] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:07.292] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:09.562] [info]  [network] Sending req=req_7980f7c15221419bafc9dc975bc56518 env=null
+[2023-07-29 18:27:12.406] [info]  [network] Response succeeded req=req_7980f7c15221419bafc9dc975bc56518 status=404
+[2023-07-29 18:27:18.307] [info]  [network] Sending req=req_7980f7c15221419bafc9dc975bc56518 env=null
+[2023-07-29 18:27:18.794] [info]  [network] Response succeeded req=req_7980f7c15221419bafc9dc975bc56518 status=200
+[2023-07-29 18:27:24.717] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:24.717] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:24.717] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:24.717] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:24.717] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:24.717] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:24.717] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:24.718] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:43.523] [info]  [network] Sending req=req_7980f7c15221419bafc9dc975bc56518 env=null
+[2023-07-29 18:27:43.765] [info]  [network] Response succeeded req=req_7980f7c15221419bafc9dc975bc56518 status=200
+[2023-07-29 18:27:49.980] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:49.980] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:49.980] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:49.980] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:49.980] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:49.980] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:49.980] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:49.980] [warn]  <Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.
+[2023-07-29 18:27:55.941] [info]  [network] Sending req=req_7980f7c15221419bafc9dc975bc56518 env=null
+[2023-07-29 18:27:56.024] [info]  [network] Response succeeded req=req_7980f7c15221419bafc9dc975bc56518 status=200

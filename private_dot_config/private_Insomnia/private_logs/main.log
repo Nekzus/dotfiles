@@ -1,0 +1,30 @@
+[2023-08-03 11:14:53.322] [info]  Running version 2023.2.2
+[2023-08-03 11:14:53.474] [error] [electron client protocol] FAILED to set default protocol 'insomnia://'
+[2023-08-03 11:14:53.483] [info]  [electron client protocol] the current executable is not the default protocol for 'insomnia://'
+[2023-08-03 11:14:53.638] [info]  [electron client protocol] the default application set for 'insomnia://' is 'insomnia.desktop
+'
+[2023-08-03 11:14:55.253] [info]  [fix] Running database repairs
+[2023-08-03 11:14:55.873] [info]  [db] Initialized DB at /home/nekzus/.config/Insomnia/insomnia.$TYPE.db
+[2023-08-03 11:14:55.873] [info]  [db] Init responses DB
+[2023-08-03 11:14:55.873] [info]  [db] Init websocket-responses DB
+[2023-08-03 11:14:55.881] [info]  [localstorage] Initialized at /home/nekzus/.config/Insomnia/localStorage
+[2023-08-03 11:14:56.244] [info]  [main] Loading file:///opt/Insomnia/resources/app.asar/index.html
+[2023-08-03 11:14:56.850] [info]  [updater] Updater not running platform=linux dev=false
+[2023-08-03 11:15:00.756] [info]  [main] Window ready, handling command line arguments [ '/opt/Insomnia/insomnia' ]
+[2023-08-03 11:15:12.316] [info]  [response] Delete body /home/nekzus/.config/Insomnia/responses/c947fe67-32b9-4956-b4bd-321d8054858b.response
+[2023-08-03 11:15:12.316] [info]  [response] Delete timeline /home/nekzus/.config/Insomnia/responses/d05a59d7-ff22-4151-8961-6b3a58211748.timeline
+[2023-08-03 11:15:14.071] [info]  [response] Delete body /home/nekzus/.config/Insomnia/responses/8f71247b-706d-42c2-ae42-a223d55c6171.response
+[2023-08-03 11:15:14.072] [info]  [response] Delete timeline /home/nekzus/.config/Insomnia/responses/55de8913-d01d-4535-bf60-4212b185f819.timeline
+[2023-08-03 11:15:18.254] [info]  [response] Delete body /home/nekzus/.config/Insomnia/responses/2ad239db-46b8-4d6d-8ad7-3cd3bc1d3e68.response
+[2023-08-03 11:15:18.254] [info]  [response] Delete timeline /home/nekzus/.config/Insomnia/responses/590654dc-6fcd-4592-8e7d-68121cc24e92.timeline
+[2023-08-03 11:15:43.125] [info]  [response] Delete body /home/nekzus/.config/Insomnia/responses/9c97d2fa-3911-4adb-a37c-0e7c08c4ae32.response
+[2023-08-03 11:15:43.125] [info]  [response] Delete timeline /home/nekzus/.config/Insomnia/responses/5275c5ea-7f07-41de-b7f8-2135c175d1d3.timeline
+[2023-08-03 11:15:44.712] [info]  [response] Delete body /home/nekzus/.config/Insomnia/responses/b5754de7-c808-48f5-bad7-a0cb0d2f7c2a.response
+[2023-08-03 11:15:44.712] [info]  [response] Delete timeline /home/nekzus/.config/Insomnia/responses/7c75f820-9cd8-4aed-82b5-cb06162f00da.timeline
+[2023-08-03 11:16:01.132] [info]  [response] Delete timeline /home/nekzus/.config/Insomnia/responses/2d97ceb3-5ede-4a71-bfd9-dbe38a1fe319.timeline
+[2023-08-03 11:16:01.133] [info]  [response] Delete body /home/nekzus/.config/Insomnia/responses/24ee25b8-99e6-47b2-bb04-1c4d6bdb0902.response
+[2023-08-03 11:16:02.550] [info]  [response] Delete body /home/nekzus/.config/Insomnia/responses/691469f9-aa29-4482-ad7e-33e4f07d30b5.response
+[2023-08-03 11:16:02.550] [info]  [response] Delete timeline /home/nekzus/.config/Insomnia/responses/c5163d2c-48ca-4aa3-8259-8ed170ad5754.timeline
+[2023-08-03 11:16:30.414] [info]  [response] Delete timeline /home/nekzus/.config/Insomnia/responses/a0561e68-1750-4a5a-9cc8-ebbef4d4170e.timeline
+[2023-08-03 11:16:30.414] [info]  [response] Delete body /home/nekzus/.config/Insomnia/responses/00df3c6d-b3f7-4e20-9bc9-3737ea7d914e.response
+[2023-08-03 14:14:56.900] [info]  [updater] Updater not running platform=linux dev=false

@@ -1,0 +1,31 @@
+[2023-08-03 11:14:59.317] [info]  [db] Initialized DB client
+[2023-08-03 11:14:59.477] [warn]  The vm module of Node.js is deprecated in the renderer process and will be removed.
+[2023-08-03 11:14:59.491] [warn]  The vm module of Node.js is deprecated in the renderer process and will be removed.
+[2023-08-03 11:14:59.827] [warn]  The vm module of Node.js is deprecated in the renderer process and will be removed.
+[2023-08-03 11:15:00.062] [info]  [FileSystemDriver] Initialized in "/home/nekzus/.config/Insomnia/version-control"
+[2023-08-03 11:15:00.062] [info]  [sync] checking for collections which need to be moved into a remote project
+[2023-08-03 11:15:00.064] [info]  [FileSystemDriver] Initialized in "/home/nekzus/.config/Insomnia/version-control"
+[2023-08-03 11:15:10.318] [error] Error: No importers found for file
+    at Eye (file:///opt/Insomnia/resources/app.asar/index.f53f8b5a.js:80:43986)
+    at async file:///opt/Insomnia/resources/app.asar/debug.f93efab3.js:34:6649
+    at async file:///opt/Insomnia/resources/app.asar/debug.f93efab3.js:34:7020
+[2023-08-03 11:15:12.204] [info]  [network] Sending req=req_7980f7c15221419bafc9dc975bc56518 env=null
+[2023-08-03 11:15:12.277] [info]  [network] Response succeeded req=req_7980f7c15221419bafc9dc975bc56518 status=404
+[2023-08-03 11:15:13.992] [info]  [network] Sending req=req_7980f7c15221419bafc9dc975bc56518 env=null
+[2023-08-03 11:15:14.047] [info]  [network] Response succeeded req=req_7980f7c15221419bafc9dc975bc56518 status=404
+[2023-08-03 11:15:18.168] [info]  [network] Sending req=req_7980f7c15221419bafc9dc975bc56518 env=null
+[2023-08-03 11:15:18.231] [info]  [network] Response succeeded req=req_7980f7c15221419bafc9dc975bc56518 status=404
+[2023-08-03 11:15:38.440] [error] Error: No importers found for file
+    at Eye (file:///opt/Insomnia/resources/app.asar/index.f53f8b5a.js:80:43986)
+    at async file:///opt/Insomnia/resources/app.asar/debug.f93efab3.js:34:6649
+    at async file:///opt/Insomnia/resources/app.asar/debug.f93efab3.js:34:7020
+[2023-08-03 11:15:43.037] [info]  [network] Sending req=req_7980f7c15221419bafc9dc975bc56518 env=null
+[2023-08-03 11:15:43.092] [info]  [network] Response succeeded req=req_7980f7c15221419bafc9dc975bc56518 status=404
+[2023-08-03 11:15:44.638] [info]  [network] Sending req=req_7980f7c15221419bafc9dc975bc56518 env=null
+[2023-08-03 11:15:44.692] [info]  [network] Response succeeded req=req_7980f7c15221419bafc9dc975bc56518 status=404
+[2023-08-03 11:16:01.048] [info]  [network] Sending req=req_7980f7c15221419bafc9dc975bc56518 env=null
+[2023-08-03 11:16:01.109] [info]  [network] Response succeeded req=req_7980f7c15221419bafc9dc975bc56518 status=405
+[2023-08-03 11:16:02.474] [info]  [network] Sending req=req_7980f7c15221419bafc9dc975bc56518 env=null
+[2023-08-03 11:16:02.528] [info]  [network] Response succeeded req=req_7980f7c15221419bafc9dc975bc56518 status=405
+[2023-08-03 11:16:30.334] [info]  [network] Sending req=req_7980f7c15221419bafc9dc975bc56518 env=null
+[2023-08-03 11:16:30.392] [info]  [network] Response succeeded req=req_7980f7c15221419bafc9dc975bc56518 status=405

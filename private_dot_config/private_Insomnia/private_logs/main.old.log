@@ -1,0 +1,21 @@
+[2023-07-29 18:26:36.416] [info]  Running version 2023.2.2
+[2023-07-29 18:26:36.451] [error] [electron client protocol] FAILED to set default protocol 'insomnia://'
+[2023-07-29 18:26:36.459] [info]  [electron client protocol] the current executable is not the default protocol for 'insomnia://'
+[2023-07-29 18:26:36.509] [info]  [electron client protocol] the default application set for 'insomnia://' is 'insomnia.desktop
+'
+[2023-07-29 18:26:37.208] [info]  [fix] Running database repairs
+[2023-07-29 18:26:38.102] [info]  [db] Initialized DB at /home/nekzus/.config/Insomnia/insomnia.$TYPE.db
+[2023-07-29 18:26:38.103] [info]  [db] Init responses DB
+[2023-07-29 18:26:38.103] [info]  [db] Init websocket-responses DB
+[2023-07-29 18:26:38.110] [info]  [localstorage] Initialized at /home/nekzus/.config/Insomnia/localStorage
+[2023-07-29 18:26:38.338] [info]  [main] Loading file:///opt/Insomnia/resources/app.asar/index.html
+[2023-07-29 18:26:38.854] [info]  [updater] Updater not running platform=linux dev=false
+[2023-07-29 18:26:41.876] [info]  [main] Window ready, handling command line arguments [ '/opt/Insomnia/insomnia' ]
+[2023-07-29 18:27:12.435] [info]  [response] Delete body /home/nekzus/.config/Insomnia/responses/2d86089d-d5c3-43bd-ada6-7fcd0d5257be.response
+[2023-07-29 18:27:12.436] [info]  [response] Delete timeline /home/nekzus/.config/Insomnia/responses/d6615c67-8cdb-4a00-b82f-a91fc4dec62b.timeline
+[2023-07-29 18:27:18.818] [info]  [response] Delete body /home/nekzus/.config/Insomnia/responses/ad17cb41-691b-4f2d-9a0d-bf6a96565e0e.response
+[2023-07-29 18:27:18.818] [info]  [response] Delete timeline /home/nekzus/.config/Insomnia/responses/7f2598f5-17c9-4cd5-b4e7-afc7fd3a2703.timeline
+[2023-07-29 18:27:43.792] [info]  [response] Delete body /home/nekzus/.config/Insomnia/responses/cba8461d-e64e-471f-b834-26e2f10c36ef.response
+[2023-07-29 18:27:43.793] [info]  [response] Delete timeline /home/nekzus/.config/Insomnia/responses/05b90ebc-43bd-42db-9cb9-9f5fbe7d6637.timeline
+[2023-07-29 18:27:56.052] [info]  [response] Delete body /home/nekzus/.config/Insomnia/responses/9b642e83-0706-429f-9ef1-a0621e5af955.response
+[2023-07-29 18:27:56.052] [info]  [response] Delete timeline /home/nekzus/.config/Insomnia/responses/07fd56fd-9222-4ded-a094-5e74701cb2ad.timeline

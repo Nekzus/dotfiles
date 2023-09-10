@@ -1,0 +1,112 @@
+[
+	{
+		"value": "Preparing request to http://localhost:3000/api/notes/8",
+		"name": "Text",
+		"timestamp": 1690583517891
+	},
+	{
+		"value": "Current time is 2023-07-28T22:31:57.891Z",
+		"name": "Text",
+		"timestamp": 1690583517891
+	},
+	{
+		"value": "Enable automatic URL encoding",
+		"name": "Text",
+		"timestamp": 1690583517891
+	},
+	{
+		"value": "Using default HTTP version",
+		"name": "Text",
+		"timestamp": 1690583517892
+	},
+	{
+		"value": "Enable timeout of 30000ms",
+		"name": "Text",
+		"timestamp": 1690583517892
+	},
+	{
+		"value": "Enable SSL validation",
+		"name": "Text",
+		"timestamp": 1690583517892
+	},
+	{
+		"name": "Text",
+		"value": "Hostname in DNS cache was stale, zapped\n",
+		"timestamp": 1690583517892
+	},
+	{
+		"name": "Text",
+		"value": "  Trying 127.0.0.1:3000...\n",
+		"timestamp": 1690583517892
+	},
+	{
+		"name": "Text",
+		"value": "Connected to localhost (127.0.0.1) port 3000 (#48)\n",
+		"timestamp": 1690583517892
+	},
+	{
+		"name": "HeaderOut",
+		"value": "DELETE /api/notes/8 HTTP/1.1\r\nHost: localhost:3000\r\nUser-Agent: insomnia/2023.2.2\r\nContent-Type: application/json\r\nAccept: */*\r\nContent-Length: 65\r\n\r\n",
+		"timestamp": 1690583517892
+	},
+	{
+		"name": "DataOut",
+		"value": "{\n\t\"title\": \"my last note\",\n\t\"content\": \"this is my first note\"\n}",
+		"timestamp": 1690583517892
+	},
+	{
+		"name": "Text",
+		"value": "Mark bundle as not supporting multiuse\n",
+		"timestamp": 1690583518048
+	},
+	{
+		"name": "HeaderIn",
+		"value": "HTTP/1.1 500 Internal Server Error\r\n",
+		"timestamp": 1690583518048
+	},
+	{
+		"name": "HeaderIn",
+		"value": "vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch, Accept-Encoding\r\n",
+		"timestamp": 1690583518048
+	},
+	{
+		"name": "HeaderIn",
+		"value": "content-type: application/json\r\n",
+		"timestamp": 1690583518048
+	},
+	{
+		"name": "HeaderIn",
+		"value": "date: Fri, 28 Jul 2023 22:31:58 GMT\r\n",
+		"timestamp": 1690583518048
+	},
+	{
+		"name": "HeaderIn",
+		"value": "connection: close\r\n",
+		"timestamp": 1690583518048
+	},
+	{
+		"name": "HeaderIn",
+		"value": "transfer-encoding: chunked\r\n",
+		"timestamp": 1690583518048
+	},
+	{
+		"name": "HeaderIn",
+		"value": "\r\n",
+		"timestamp": 1690583518048
+	},
+	{
+		"name": "Text",
+		"value": "Received 198 B chunk",
+		"timestamp": 1690583518048
+	},
+	{
+		"name": "Text",
+		"value": "Received 5 B chunk",
+		"timestamp": 1690583518049
+	},
+	{
+		"name": "Text",
+		"value": "Closing connection 48\n",
+		"timestamp": 1690583518049
+	}
+]
