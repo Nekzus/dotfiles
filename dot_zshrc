@@ -18,6 +18,9 @@ export PATH=$PATH:/home/nekzus/snap/flutter/common/flutter
 # Path ttype
 export PATH=$PATH:/home/nekzus/.cargo/bin
 
+# Path Chrome
+export CHROME_PATH=/usr/bin/google-chrome
+
 # Path android studio.
 export ANDROID_STUDIO_HOME=/opt/android-studio
 
@@ -211,3 +214,94 @@ if [ -x "$(command -v exa)" ]; then
     alias ls="exa"
     alias la="exa --long --all --group"
 fi
+
+
+# Shell Script
+
+# Función para eliminar directorios
+delete_directories() {
+  rm -rf "$@"  # Elimina los directorios especificados
+}
+
+# Función para abrir el navegador en segundo plano
+open_browser() {
+  brave-browser --incognito "$1" > /dev/null 2>&1 &
+}
+
+# Función para reemplazar el título en README.md
+replace_readme_title() {
+  local project_name="$1"
+  sed -i "s/# Welcome to #PROJECT_TITLE#/# Welcome to $project_name/" README.md || return 1
+}
+
+# Función para clonar el repositorio, configurar y ejecutar el proyecto
+setup_and_run_project() {
+  local project_name="$1"
+  local github_repo="$2"  # URL del repositorio
+  local port="$3"  # Puerto para la URL
+
+  # Clonar el repositorio
+  git clone "$github_repo" "$project_name" || return 1
+
+  # Cambiar al directorio del proyecto
+  cd "$project_name" || return 1
+
+  # Actualizar el título del proyecto en el archivo README.md
+  replace_readme_title "$project_name" || return 1
+
+  # Modificar el nombre en package.json con jq
+  jq '.name = "'"$project_name"'"' package.json > temp.json && mv temp.json package.json
+
+  # Eliminar directorios innecesarios
+  delete_directories .git .next node_modules
+
+  # Instalar dependencias del proyecto
+  bun install || return 1  # o yarn install si prefieres usar Yarn
+
+  # Abrir el proyecto en Visual Studio Code Insiders
+  code-insiders . -r &
+
+  # Esperar un momento para que se inicie el servidor
+  sleep 5  # Ajusta el tiempo de espera según tus necesidades
+
+  # Abrir el proyecto en Brave en modo incógnito en segundo plano
+  open_browser "http://localhost:$port"  # Cambia el puerto si es necesario
+
+  # Ejecutar el proyecto en modo desarrollo
+  bun run dev || return 1  # o yarn dev si prefieres usar Yarn
+}
+
+# Project Next.js
+nextbun() {
+  if [ $# -ne 1 ]; then
+    echo "Usage: nextbun <nombre_proyecto>"
+    return 1
+  fi
+
+  local project_name="$1"
+  local github_repo="https://github.com/Nekzus/template-nextjs-bun.git"  # URL del repositorio fijo
+  local port="3000"  # Puerto para la URL
+
+  setup_and_run_project "$project_name" "$github_repo" "$port" || {
+    echo "Error: No se pudo configurar y ejecutar el proyecto."
+    return 1
+  }
+}
+
+
+# Project React.js
+reactbun() {
+  if [ $# -ne 1 ]; then
+    echo "Usage: reactbun <nombre_proyecto>"
+    return 1
+  fi
+
+  local project_name="$1"
+  local github_repo="https://github.com/Nekzus/template-reactjs-bun.git"  # URL del repositorio fijo
+  local port="5173"  # Puerto para la URL
+
+  setup_and_run_project "$project_name" "$github_repo" "$port" || {
+    echo "Error: No se pudo configurar y ejecutar el proyecto."
+    return 1
+  }
+}
