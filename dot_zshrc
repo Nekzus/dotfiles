@@ -216,168 +216,178 @@ if [ -x "$(command -v exa)" ]; then
 fi
 
 
-# Shell Script
+# ### SHELL SCRIPTS ###
+# o
+# # Función para eliminar directorios
+# delete_directories() {
+#   rm -rf "$@"  # Elimina los directorios especificados
+# }
 
-# Función para eliminar directorios
-delete_directories() {
-  rm -rf "$@"  # Elimina los directorios especificados
-}
+# # Función para abrir el navegador en segundo plano
+# open_browser() {
+#   brave-browser --incognito "$1" > /dev/null 2>&1 &
+# }
 
-# Función para abrir el navegador en segundo plano
-open_browser() {
-  brave-browser --incognito "$1" > /dev/null 2>&1 &
-}
+# # Función para reemplazar el título en README.md
+# replace_readme_title() {
+#   local project_name="$1"
+#   sed -i "s/# Welcome to #PROJECT_TITLE#/# Welcome to $project_name/" README.md || return 1
+# }
 
-# Función para reemplazar el título en README.md
-replace_readme_title() {
-  local project_name="$1"
-  sed -i "s/# Welcome to #PROJECT_TITLE#/# Welcome to $project_name/" README.md || return 1
-}
+# # Función para clonar el repositorio, configurar y ejecutar el proyecto
+# setup_and_run_project() {
+#   local project_name="$1"
+#   local github_repo="$2"  # URL del repositorio
+#   local port="$3"  # Puerto para la URL
 
-# Función para clonar el repositorio, configurar y ejecutar el proyecto
-setup_and_run_project() {
-  local project_name="$1"
-  local github_repo="$2"  # URL del repositorio
-  local port="$3"  # Puerto para la URL
+#   # Clonar el repositorio
+#   git clone "$github_repo" "$project_name" || return 1
 
-  # Clonar el repositorio
-  git clone "$github_repo" "$project_name" || return 1
+#   # Cambiar al directorio del proyecto
+#   cd "$project_name" || return 1
 
-  # Cambiar al directorio del proyecto
-  cd "$project_name" || return 1
+#   # Actualizar el título del proyecto en el archivo README.md
+#   replace_readme_title "$project_name" || return 1
 
-  # Actualizar el título del proyecto en el archivo README.md
-  replace_readme_title "$project_name" || return 1
+#   # Modificar el nombre en package.json con jq
+#   jq '.name = "'"$project_name"'"' package.json > temp.json && mv temp.json package.json
 
-  # Modificar el nombre en package.json con jq
-  jq '.name = "'"$project_name"'"' package.json > temp.json && mv temp.json package.json
+#   # Eliminar directorios innecesarios
+#   delete_directories .git .next node_modules
 
-  # Eliminar directorios innecesarios
-  delete_directories .git .next node_modules
+#   # Instalar dependencias del proyecto
+#   bun install || return 1  # o yarn install si prefieres usar Yarn
 
-  # Instalar dependencias del proyecto
-  bun install || return 1  # o yarn install si prefieres usar Yarn
+#   # Abrir el proyecto en Visual Studio Code Insiders
+#   code-insiders . -r &
 
-  # Abrir el proyecto en Visual Studio Code Insiders
-  code-insiders . -r &
+#   # Esperar un momento para que se inicie el servidor
+#   sleep 5  # Ajusta el tiempo de espera según tus necesidades
 
-  # Esperar un momento para que se inicie el servidor
-  sleep 5  # Ajusta el tiempo de espera según tus necesidades
+#   # Abrir el proyecto en Brave en modo incógnito en segundo plano
+#   open_browser "http://localhost:$port"  # Cambia el puerto si es necesario
 
-  # Abrir el proyecto en Brave en modo incógnito en segundo plano
-  open_browser "http://localhost:$port"  # Cambia el puerto si es necesario
+#   # Ejecutar el proyecto en modo desarrollo
+#   bun run dev || return 1  # o yarn dev si prefieres usar Yarn
+# }
 
-  # Ejecutar el proyecto en modo desarrollo
-  bun run dev || return 1  # o yarn dev si prefieres usar Yarn
-}
+# # Project Next.js
+# nextbun() {
+#   if [ $# -ne 1 ]; then
+#     echo "Usage: nextbun <nombre_proyecto>"
+#     return 1
+#   fi
 
-# Project Next.js
-nextbun() {
-  if [ $# -ne 1 ]; then
-    echo "Usage: nextbun <nombre_proyecto>"
-    return 1
-  fi
+#   local project_name="$1"
+#   local github_repo="https://github.com/Nekzus/template-nextjs-bun.git"  # URL del repositorio fijo
+#   local port="3000"  # Puerto para la URL
 
-  local project_name="$1"
-  local github_repo="https://github.com/Nekzus/template-nextjs-bun.git"  # URL del repositorio fijo
-  local port="3000"  # Puerto para la URL
-
-  setup_and_run_project "$project_name" "$github_repo" "$port" || {
-    echo "Error: No se pudo configurar y ejecutar el proyecto."
-    return 1
-  }
-}
-
-
-# Project React.js
-reactbun() {
-  if [ $# -ne 1 ]; then
-    echo "Usage: reactbun <nombre_proyecto>"
-    return 1
-  fi
-
-  local project_name="$1"
-  local github_repo="https://github.com/Nekzus/template-reactjs-bun.git"  # URL del repositorio fijo
-  local port="5173"  # Puerto para la URL
-
-  setup_and_run_project "$project_name" "$github_repo" "$port" || {
-    echo "Error: No se pudo configurar y ejecutar el proyecto."
-    return 1
-  }
-}
+#   setup_and_run_project "$project_name" "$github_repo" "$port" || {
+#     echo "Error: No se pudo configurar y ejecutar el proyecto."
+#     return 1
+#   }
+# }
 
 
-# Función para detectar el administrador de paquetes
-detect_package_manager() {
-  package_manager="bun"  # Establece un valor predeterminado
+# # Project React.js
+# reactbun() {
+#   if [ $# -ne 1 ]; then
+#     echo "Usage: reactbun <nombre_proyecto>"
+#     return 1
+#   fi
+
+#   local project_name="$1"
+#   local github_repo="https://github.com/Nekzus/template-reactjs-bun.git"  # URL del repositorio fijo
+#   local port="5173"  # Puerto para la URL
+
+#   setup_and_run_project "$project_name" "$github_repo" "$port" || {
+#     echo "Error: No se pudo configurar y ejecutar el proyecto."
+#     return 1
+#   }
+# }
+
+# # Función para detectar el administrador de paquetes
+# detect_package_manager() {
+#   package_manager="bun"  # Establece un valor predeterminado
   
-  if [ -f "package-lock.json" ]; then
-    package_manager="npm"
-  elif [ -f "pnpm-lock.yaml" ]; then
-    package_manager="pnpm"
-  elif [ -f "yarn.lock" ]; then
-    package_manager="yarn"
-  fi
-}
+#   if [ -f "package-lock.json" ]; then
+#     package_manager="npm"
+#   elif [ -f "pnpm-lock.yaml" ]; then
+#     package_manager="pnpm"
+#   elif [ -f "yarn.lock" ]; then
+#     package_manager="yarn"
+#   fi
+# }
 
-# Función para solicitar confirmación del usuario
-confirm() {
-  read -q "choice?¿Estás seguro de que deseas continuar? (y/n): "
-  echo
-  [ "$choice" = "y" ] || [ "$choice" = "Y" ]
-}
+# # Función para solicitar confirmación del usuario
+# confirm() {
+#   read -q "choice?¿Estás seguro de que deseas continuar? (y/n): "
+#   echo
+#   [ "$choice" = "y" ] || [ "$choice" = "Y" ]
+# }
 
-# Función para instalar dependencias si no existe la carpeta node_modules
-install_dependencies() {
-  if [ ! -d "node_modules" ]; then
-    detect_package_manager
-    echo "Instalando dependencias con $package_manager en $PWD..."
-    $package_manager install
-  fi
-}
+# # Función para instalar dependencias si no existe la carpeta node_modules
+# install_dependencies() {
+#   if [ ! -d "node_modules" ]; then
+#     detect_package_manager
+#     echo "Instalando dependencias con $package_manager en $PWD..."
+#     $package_manager install
+#   fi
+# }
 
-# Función para liberar puertos comunes en modo desarrollo
-release_ports() {
-  local ports=("3000" "4200" "5173" "8000" "8080")
+# # Función para liberar puertos comunes en modo desarrollo
+# release_ports() {
+#   local ports=("3000" "4200" "5173" "8000" "8080")
 
-  for port in "${ports[@]}"; do
-    if lsof -i :$port >/dev/null 2>&1; then
-      echo "Liberando puerto $port..."
-      kill $(lsof -t -i :$port)
-    fi
-  done
+#   for port in "${ports[@]}"; do
+#     if lsof -i :$port >/dev/null 2>&1; then
+#       echo "Liberando puerto $port..."
+#       kill $(lsof -t -i :$port)
+#     fi
+#   done
 
-  echo "Puertos liberados."
-}
+#   echo "Puertos liberados."
+# }
 
 # Función para abrir un proyecto en Visual Studio Code Insiders y ejecutarlo en modo desarrollo
-openpj() {
+# openpj() {
 
-  if [ ! -f "package.json" ]; then
-    echo "No se encontró un archivo package.json en la ubicación actual."
-    echo "Asegúrate de estar en la carpeta del proyecto antes de ejecutar este script."
-    return 1
-  fi
+#   if [ ! -f "package.json" ]; then
+#     echo "No se encontró un archivo package.json en la ubicación actual."
+#     echo "Asegúrate de estar en la carpeta del proyecto antes de ejecutar este script."
+#     return 1
+#   fi
    
-  # Llama a la función confirm antes de ejecutar acciones
-  if ! confirm; then
-    echo "Operación cancelada."
-    return
-  fi
+#   # Llama a la función confirm antes de ejecutar acciones
+#   if ! confirm; then
+#     echo "Operación cancelada."
+#     return
 
-  echo "Abriendo proyecto en Visual Studio Code Insiders..."
-  code-insiders . -r
+#   fi
 
-  install_dependencies
+#   echo "Abriendo proyecto en Visual Studio Code Insiders..."
+#   code-insiders . -r
 
-  echo "Iniciando servidor de desarrollo en $PWD..."
-  detect_package_manager
-  $package_manager run dev
+#   install_dependencies
+
+#   echo "Iniciando servidor de desarrollo en $PWD..."
+#   detect_package_manager
+#   $package_manager run dev
   
-  echo "Proyecto abierto y servidor en ejecución"
-  # Liberar puertos antes de salir
-  release_ports
-}
+#   echo "Proyecto abierto y servidor en ejecución"
+#   # Liberar puertos antes de salir
+#   release_ports
+# }
+
+
+
+
+
+
+
+
+
+
 
 
 
